@@ -3,6 +3,7 @@ import { Recipes } from "./Pages/Recipes";
 import HomePage from "./Pages/HomePage";
 import { FavoritesCocktails } from "./Pages/FavoritesCocktails";
 import { Layout } from './layout/Layout';
+import HomePageFigma from "./Pages/HomePageFigma";
 function AppRoute() {
   return (
     <BrowserRouter>
