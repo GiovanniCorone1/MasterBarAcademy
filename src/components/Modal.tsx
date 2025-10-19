@@ -4,10 +4,14 @@ import { useAppStore } from '../stores/useAppStore';
 import { Recipe } from '../types/index';
 import {CloseIcon } from '../assets/CloseIcon';
 import { FavoriteIcon } from '../assets/FavoriteIcon';
+import {DeleteFavoriteIcon} from '../assets/DeleteFavoriteIcon';
 export default function Modal(){
   const modal = useAppStore((state)=>state.modal)
   const closeModal=useAppStore((state)=>state.closeModal)
   const selectedRecipe=useAppStore((state)=>state.selectedRecipe)
+  const handleClickFavorite=useAppStore((state)=>state.handleClickFavorite) 
+  const favoriteExists=useAppStore((state)=>state.favoriteExists) 
+
   const renderIngredients = ()=>{
     const ingredients = []
     for(let i=1 ; i<=6 ;i++){
@@ -67,14 +71,14 @@ export default function Modal(){
                   </Dialog.Title>
                     <p>{selectedRecipe.strInstructions}</p>
                   <div className="m-2 flex justify-center items-center gap-12">
-                  <button className="size-14 rounded-full bg-[#800020] flex items-center justify-center cursor-pointer">
-                     <FavoriteIcon />
+                  <button className="size-14 rounded-full bg-[#800020] flex items-center justify-center cursor-pointer"
+                  onClick={()=>handleClickFavorite(selectedRecipe)}>
+                     {favoriteExists(selectedRecipe.idDrink)?<DeleteFavoriteIcon/>:<FavoriteIcon/>}
                   </button>
                    <button className="size-14 rounded-full bg-black flex items-center justify-center cursor-pointer" onClick={closeModal}>
                      <CloseIcon/>
                   </button>
                   </div>
-
                 </Dialog.Panel>
               </Transition.Child>
             </div>
