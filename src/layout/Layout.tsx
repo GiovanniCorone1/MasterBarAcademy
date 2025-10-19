@@ -6,11 +6,9 @@ export const Layout = () => {
   return (
     <>
     {/* componente que se repite en la pagina */}
-      <Header/>
-      <main className="bg-primary py-16 ">
+       <Header/>
     {/* el outlet indica el contenido unico de cada pagina */}
-        <Outlet/>
-      </main>
+      <Outlet/>
       <Modal/>
       <Footer/>
     </>

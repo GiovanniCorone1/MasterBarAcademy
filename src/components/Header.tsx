@@ -37,8 +37,8 @@ export const Header = () => {
     searchRecipes(searchFilters)
   }
   return (
-    <header className={isHome ?"bg-[url(/imagen1.webp)] bg-left bg-cover":"bg-slate-800"}>
-      <div className="mx-auto container px-5 py-16">
+    <header className={isHome ?"bg-[url(/imagen1.webp)] bg-left bg-cover":"bg-primary"}>
+      <div className="mx-auto container px-5">
         <div className="flex justify-between items-center">
           <div>
             <Link to="/">
@@ -46,9 +46,9 @@ export const Header = () => {
             </Link>
           </div>
           <nav className="flex gap-4 text-white">
-            <NavLink to="/" className={({isActive})=> isActive ? "text-orange-400 uppercase font-bold":"text-white uppercase font-bold"}>Inicio</NavLink>
+            <NavLink to="/" className={({isActive})=> isActive ? "text-orange-400 uppercase font-bold bg-white/25 px-1.5 hover:bg-white":"text-white uppercase font-bold"}>Inicio</NavLink>
             <NavLink to="/recipes" className={({isActive})=> isActive ? "text-orange-400 uppercase font-bold bg-white/25 px-1.5 hover:bg-white":"text-white uppercase font-bold"}>Recetas</NavLink>
-            <NavLink to="/favorites" className={({isActive})=> isActive ? "text-orange-400 uppercase font-bold":"text-white uppercase font-bold"}>Favorites</NavLink>
+            <NavLink to="/favorites" className={({isActive})=> isActive ? "text-orange-400 uppercase font-bold  bg-white/25 px-1.5 hover:bg-white":"text-white uppercase font-bold"}>Favorites</NavLink>
           </nav>
           {/* el formulario tbm podria ser un componente */}
         </div>

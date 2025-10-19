@@ -18,7 +18,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ 
   className = "", 
   texto = "Value", 
-  estado = "normal" 
+  //estado = "normal" 
 }) => {
   return (
     <div className={className}>
@@ -37,7 +37,7 @@ interface CheckboxProps {
 
 const Checkbox: React.FC<CheckboxProps> = ({ 
   className = "", 
-  propiedad1 = "Frame 8",
+  //propiedad1 = "Frame 8",
   onClick 
 }) => {
   return (

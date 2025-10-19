@@ -3,6 +3,7 @@
 @theme {
   --color-primary:#0d1b2a;
   --color-secondary:#d4af37;
+  --color-secondary-hover:#aa8c2c;
 }
 body {
   font-family: 'Onest Variable', sans-serif;

@@ -67,7 +67,7 @@ export default function Modal(){
                   </Dialog.Title>
                     <p>{selectedRecipe.strInstructions}</p>
                   <div className="m-2 flex justify-center items-center gap-12">
-                  <button className="size-14 rounded-full bg-orange-400 flex items-center justify-center cursor-pointer">
+                  <button className="size-14 rounded-full bg-[#800020] flex items-center justify-center cursor-pointer">
                      <FavoriteIcon />
                   </button>
                    <button className="size-14 rounded-full bg-black flex items-center justify-center cursor-pointer" onClick={closeModal}>

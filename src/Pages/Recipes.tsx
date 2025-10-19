@@ -5,8 +5,8 @@ export const Recipes = () => {
   const drinks=useAppStore((state)=>state.drinks)
   const hasDrinks  = useMemo(() => drinks?.drinks.length || 0, [drinks])
   return (
-    <>
-      <h1 className='text-6xl font-extrabold'>Recetas</h1>
+    <section className='bg-primary'>
+      <h1 className='text-6xl font-extrabold text-[#e7e8ea]'>Recetas</h1>
       {hasDrinks ? (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-10 gap-10'>
           {
@@ -21,7 +21,7 @@ export const Recipes = () => {
       ):(
         <><p className='my-10 text-center text-2xl'>No hay resultados aún , utiliza el formulario</p> </>
       )}
-    </>
+    </section>
   )
 }
 // import { useState, useMemo } from 'react';
