@@ -1,4 +1,7 @@
 # The Cocktail Lab
+## Al iniciar el proyecto siga los siguientes pasos:
+1.Instalar dependencias: npm install
+2.Levantar el proyecto en el navegador localhost:npm run dev
 ## 1.React router
  Libreria para tener varias paginas con distintas urls
  Installation : 
