@@ -6,7 +6,7 @@ export type FavoriteSilceType={
     handleClickFavorite:(recipe:Recipe)=>void
     favoriteExists:(id:Recipe["idDrink"])=>boolean
 }
-export const createFavoritesSlice : StateCreator<FavoriteSilceType> = (set, get) => ({
+export const createFavoritesSlice : StateCreator<FavoriteSilceType> = (set, get, ) => ({
     favorites: [],
     handleClickFavorite:(recipe:Recipe)=>{
       if(get().favoriteExists(recipe.idDrink)){

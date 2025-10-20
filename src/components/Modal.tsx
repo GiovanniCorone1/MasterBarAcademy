@@ -72,7 +72,9 @@ export default function Modal(){
                     <p>{selectedRecipe.strInstructions}</p>
                   <div className="m-2 flex justify-center items-center gap-12">
                   <button className="size-14 rounded-full bg-[#800020] flex items-center justify-center cursor-pointer"
-                  onClick={()=>handleClickFavorite(selectedRecipe)}>
+                  onClick={()=>{handleClickFavorite(selectedRecipe)
+                    closeModal() //cerramos el modal al agregar o eliminar de favoritos
+                  }}>
                      {favoriteExists(selectedRecipe.idDrink)?<DeleteFavoriteIcon/>:<FavoriteIcon/>}
                   </button>
                    <button className="size-14 rounded-full bg-black flex items-center justify-center cursor-pointer" onClick={closeModal}>
