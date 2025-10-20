@@ -1,5 +1,5 @@
 # The Cocktail Lab
-## Al iniciar el proyecto siga los siguientes pasos:
+## Al descargar el proyecto siga los siguientes pasos para iniciar el proyecto:
 Instalar dependencias: 
  ```bash
    npm install
