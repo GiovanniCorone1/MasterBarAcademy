@@ -1,7 +1,14 @@
 # The Cocktail Lab
 ## Al iniciar el proyecto siga los siguientes pasos:
-1.Instalar dependencias: npm install
-2.Levantar el proyecto en el navegador localhost:npm run dev
+Instalar dependencias: 
+ ```bash
+   npm install
+ ```
+
+Levantar el proyecto en el navegador:
+  ```bash 
+    npm run dev
+  ```
 ## 1.React router
  Libreria para tener varias paginas con distintas urls
  Installation : 
@@ -27,4 +34,4 @@ npm i axios zod
 Para el componente de la ventana modal
 ```bash
 npm install @headlessui/react@latest
-```"# TheCocktailLab" 
+```
