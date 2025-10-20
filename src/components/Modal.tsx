@@ -57,16 +57,16 @@ export default function Modal(){
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl sm:p-6" >
-                  <Dialog.Title as="h3" className="text-gray-900 text-4xl font-extrabold my-5 text-center">
+                <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white px-4 pt-2 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xl sm:p-6" >
+                  <Dialog.Title as="h3" className="text-gray-900 text-3xl font-extrabold my-2 text-center">
                       {selectedRecipe.strDrink}
                   </Dialog.Title>
-                  <img src={selectedRecipe.strDrinkThumb} alt={`imagen de ${selectedRecipe.strDrinkThumb}`} className='mx-auto w-96'/>
-                  <Dialog.Title as="h3" className="text-gray-900 text-2xl font-extrabold my-5">
+                  <img src={selectedRecipe.strDrinkThumb} alt={`imagen de ${selectedRecipe.strDrinkThumb}`} className='mx-auto w-96 h-64'/>
+                  <Dialog.Title as="h3" className="text-gray-900 text-2xl font-extrabold my-2">
                     Ingredientes y Cantidades:
                   </Dialog.Title>
                     {renderIngredients()}
-                  <Dialog.Title as="h3" className="text-gray-900 text-2xl font-extrabold my-5">
+                  <Dialog.Title as="h3" className="text-gray-900 text-2xl font-extrabold my-2">
                     Instrucciones
                   </Dialog.Title>
                     <p>{selectedRecipe.strInstructions}</p>
