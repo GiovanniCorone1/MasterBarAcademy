@@ -13,6 +13,7 @@ export const Header = () => {
   //conectamos el componente al store
   const fetchCategories=useAppStore((state)=>state.fetchCategories)
   const searchRecipes=useAppStore((state)=>state.searchRecipes)
+  const showNotification=useAppStore((state)=>state.showNotification)
   //const {drinks} = categories , la misma idea cuando lo mapeamos
   const {drinks} = useAppStore((state)=>state.categories)
   useEffect(()=>{
@@ -20,7 +21,6 @@ export const Header = () => {
   },[])
   //lo que escribimos en el input se guarda en el estado
   const handleChange=(e:ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement>)=>{
-    // e.preventDefault();
     const {name , value} = e.target
     setSearchFilters({
       ...searchFilters,
@@ -30,7 +30,10 @@ export const Header = () => {
   const handleSubmit=(e:FormEvent<HTMLFormElement>)=>{
     e.preventDefault()
     if(Object.values(searchFilters).includes("")){
-      console.log("todos los campos son requeridos")
+      showNotification({
+        text:"Todos los campos son requeridos",
+        error:true
+      })
       return
     }
     //consultamos las recetas

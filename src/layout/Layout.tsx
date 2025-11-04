@@ -4,6 +4,7 @@ import Modal from "../components/Modal"
 import Footer from "../components/Footer"
 import { useEffect } from "react"
 import { useAppStore } from "../stores/useAppStore"
+import Notification from "../components/Notification"
 export const Layout = () => {
   const loadFromStorage= useAppStore((state)=>state.loadFromStorage)
   useEffect(()=>{
@@ -18,6 +19,7 @@ export const Layout = () => {
       <Outlet/>
 
       <Modal/>
+      <Notification/>
       <Footer/>
     </>
   )
