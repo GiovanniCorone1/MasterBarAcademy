@@ -8,6 +8,28 @@
   </head>
   <body>
     <div id="root"></div>
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+		webhookUrl: 'http://localhost:5678/webhook/9d252426-f5b2-4d76-bb18-23696dcc32c8/chat',
+	
+  initialMessages: [
+		'Hola, soy un agente de la academia Master Bar Acadeny! 👋',
+		'¿En que puedo ayudarte?'
+	],
+  i18n: {
+		en: {
+			title: 'Hola 👋',
+			subtitle: "Te puedo ayudar durante las 24 horas.",
+			footer: '',
+			getStarted: 'New Conversation',
+			inputPlaceholder: 'Type your question..',
+		},
+	},
+});
+</script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
