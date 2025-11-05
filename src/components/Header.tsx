@@ -52,6 +52,7 @@ export const Header = () => {
             <NavLink to="/" className={({isActive})=> isActive ? "text-orange-400 uppercase font-bold bg-white/25 px-1.5 hover:bg-white":"text-white uppercase font-bold"}>Inicio</NavLink>
             <NavLink to="/recipes" className={({isActive})=> isActive ? "text-orange-400 uppercase font-bold bg-white/25 px-1.5 hover:bg-white":"text-white uppercase font-bold"}>Recetas</NavLink>
             <NavLink to="/favorites" className={({isActive})=> isActive ? "text-orange-400 uppercase font-bold  bg-white/25 px-1.5 hover:bg-white":"text-white uppercase font-bold"}>Favorites</NavLink>
+            <NavLink to="/generate-ai" className={({isActive})=> isActive ? "text-orange-400 uppercase font-bold  bg-white/25 px-1.5 hover:bg-white":"text-white uppercase font-bold"}>Generar con IA</NavLink>
           </nav>
           {/* el formulario tbm podria ser un componente */}
         </div>
