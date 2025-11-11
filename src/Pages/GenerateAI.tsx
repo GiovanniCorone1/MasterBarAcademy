@@ -2,10 +2,12 @@ import { useAppStore } from "../stores/useAppStore";
 
 export default function GenerateAI() {
   const showNotification = useAppStore((state)=>state.showNotification);
-  const handleSubmit = (e:React.FormEvent<HTMLFormElement>)=>{
+  const generateRecipe = useAppStore((state)=>state.generateRecipe);
+  const recipe = useAppStore((state)=>state.recipe);
+  const handleSubmit = async(e:React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const prompt = formData.get("prompt") as string;
+    const form = new FormData(e.currentTarget);
+    const prompt = form.get("prompt") as string;
     if(prompt.trim()===""){
       showNotification({
         text:"La búsqueda no puede estar vacía",
@@ -13,6 +15,7 @@ export default function GenerateAI() {
       });
       return 
     }
+    await generateRecipe(prompt)
   }
   
   return (
@@ -44,12 +47,10 @@ export default function GenerateAI() {
             </button>
           </div>
         </form>
-
-        <div className="py-10 whitespace-pre-wrap">
-
+        <div className="py-10 whitespace-pre-wrap text-white">
+          {recipe}
         </div>
       </div>
-
     </> 
   )
 }
