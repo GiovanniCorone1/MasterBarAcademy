@@ -4,8 +4,14 @@
   --color-primary:#0d1b2a;
   --color-secondary:#d4af37;
   --color-secondary-hover:#aa8c2c;
+  --chat--color-primary: #007bff
 }
 body {
   font-family: 'Onest Variable', sans-serif;
   background-color: var(--color-primary);
+}
+.chat-window-toggle {
+  --chat--toggle--background: #007bff;
+  --chat--toggle--hover--background: #007bff;
+	--chat--toggle--active--background:#007bff;
 }
