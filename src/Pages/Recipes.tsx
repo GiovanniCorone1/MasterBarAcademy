@@ -5,7 +5,7 @@ export const Recipes = () => {
   const drinks=useAppStore((state)=>state.drinks)
   const hasDrinks  = useMemo(() => drinks?.drinks.length || 0, [drinks])
   return (
-    <section className='bg-primary'>
+    <section className='bg-primary px-14'>
       <h1 className='text-6xl font-extrabold text-[#e7e8ea]'>Recetas</h1>
       {hasDrinks ? (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-10 gap-10'>
@@ -19,7 +19,7 @@ export const Recipes = () => {
           }
         </div>
       ):(
-        <><p className='my-10 text-center text-2xl'>No hay resultados aún , utiliza el formulario</p> </>
+        <><p className='my-10 text-center text-2xl text-[#e7e8ea]'>No hay resultados aún , utiliza el formulario</p> </>
       )}
     </section>
   )

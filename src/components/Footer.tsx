@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <footer className="py-4 md:px-36 px-2 font-medium bg-radial-home">
+    <footer className="py-4 md:px-14 px-2 font-medium bg-radial-home">
       <div className="flex justify-between items-center border-t border-[#f0f9ff] pt-8">
         <nav className="flex flex-col gap-4 text-[#f0f9ff]/70  font-semibold font-body text-lg">
           <Link to="calculadora" smooth={true} duration={500} className='hover:text-[#f0f9ff]/90 transition-colors duration-500 cursor-pointer'>
